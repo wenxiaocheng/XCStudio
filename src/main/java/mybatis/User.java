@@ -1,4 +1,5 @@
 package mybatis;
+
 import java.util.Date;
 
 public class User {
@@ -57,9 +58,8 @@ public class User {
 		this.birthday = birthday;
 	}
 
-	public User(int id, String username, String password, String sex, String name, Date birthday) {
+	public User(String username, String password, String sex, String name, Date birthday) {
 		super();
-		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.sex = sex;

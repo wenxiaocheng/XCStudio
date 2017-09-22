@@ -1,26 +1,46 @@
 package mybatis;
 
-import java.io.IOException;
-import java.io.Reader;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
-import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class TestMyBatis {
-	private final static SqlSessionFactory sqlSessionFactory;
+	static SqlSessionFactory sqlSessionFactory = null;
 	static {
-		String resource = "mybatis-config.xml";
-		Reader reader = null;
-		try {
-			reader = Resources.getResourceAsReader(resource);
-		} catch (IOException e) {
-			System.out.println(e.getMessage());
-		}
-		sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
+		sqlSessionFactory = MyBatisUntil.getSqlSessionFactory();
 	}
 
-	public static SqlSessionFactory getSqlSessionFactory() {
-		return sqlSessionFactory;
+	public static void main(String[] args) {
+//		testAdd();
+		getUser();
+	}
+
+	public static void testAdd() {
+		SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		try {
+			UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+			User user = new User("zhangsan", "123456", "man", "ahangsan", ft.parse("1995-08-09"));
+			userMapper.insertUser(user);
+			sqlSession.commit();// 这里一定要提交，不然数据进不去数据库中
+		} catch (ParseException e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+	}
+
+	public static void getUser() {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		try {
+			UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+			User user = userMapper.getUser(1);
+			System.out.println("id: " + user.getId() + "username: " + user.getUsername());
+		} finally {
+			sqlSession.close();
+		}
 	}
 }
+
