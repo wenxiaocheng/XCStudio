@@ -24,7 +24,7 @@ public class TestMyBatis {
 			UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
 			User user = new User("zhangsan", "123456", "man", "ahangsan", ft.parse("1995-08-09"));
 			userMapper.insertUser(user);
-			sqlSession.commit();// 这里一定要提交，不然数据进不去数据库中
+			sqlSession.commit();
 		} catch (ParseException e) {
 			e.printStackTrace();
 		} finally {

@@ -8,8 +8,8 @@
 		(username, password, sex, name, birthday) VALUES (#{username},
 		#{password}, #{sex}, #{name}, #{birthday})
 	</insert>
-	<select id="getUser" resultType="User" parameterType="String">
+	<select id="getUser" resultType="User" parameterType="int">
 		select *
-		from users where id=#{id}
+		from user where id=#{id}
 	</select>
 </mapper>
