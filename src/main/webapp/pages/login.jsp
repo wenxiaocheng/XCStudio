@@ -8,10 +8,10 @@
 </head>
 <body>
 	<form action="LoginServlet" method="post">
-		用户名：<input type="text" name="username" title="用户名"><br>
-		密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" name="password"
-			title="密码"><br> <input type="submit" value="登录">
-		<input type="reset" value="重置">
+		用户名：<br>
+		<input type="text" name="username" title="用户名"><br> 密码：<br>
+		<input type="password" name="password" title="密码"><br> <input
+			type="submit" value="登录"> <input type="reset" value="重置">
 	</form>
 </body>
 </html>

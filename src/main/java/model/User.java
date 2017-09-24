@@ -1,4 +1,4 @@
-package mybatis;
+package model;
 
 import java.util.Date;
 
@@ -6,8 +6,8 @@ public class User {
 	private int id;
 	private String username;
 	private String password;
-	private String sex;
 	private String name;
+	private String sex;
 	private Date birthday;
 
 	public int getId() {
@@ -34,20 +34,20 @@ public class User {
 		this.password = password;
 	}
 
-	public String getSex() {
-		return sex;
-	}
-
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
-
 	public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
 	}
 
 	public Date getBirthday() {

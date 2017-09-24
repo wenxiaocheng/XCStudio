@@ -4,16 +4,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>登录失败</title>
+<title>登录成功</title>
 </head>
 <body>
-	<h2 style="color: red;">登录失败！</h2>
+	<h2>登录成功！</h2>
 	<h3>你的信息如下：</h3>
+	<%
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+	%>
 	用户名：<%
-		request.getParameter("username");
+		out.print(username);
 	%><br> 密码：<%
-		request.getParameter("password");
+		out.print(password);
 	%><br>
-	<a href="login.jsp">返回登录页面</a>
+	<a href="index.jsp">进入首页</a>
 </body>
 </html>

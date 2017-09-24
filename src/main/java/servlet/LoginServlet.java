@@ -3,6 +3,8 @@ package servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,7 +31,6 @@ public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -41,10 +42,22 @@ public class LoginServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 
+		// 请求重定向
+		// if (username.equals("wen") && password.equals("xiaocheng")) {
+		// response.sendRedirect("/hk-jsp-study/success.jsp");
+		// } else {
+		// response.sendRedirect("/hk-jsp-study/error.jsp");
+		// }
+		// 请求转发
+		String forword = null;
 		if (username.equals("wen") && password.equals("xiaocheng")) {
-			response.sendRedirect("/hk-jsp-study/success.jsp");
+			forword = "success.jsp";
+			RequestDispatcher dispatcher = request.getRequestDispatcher(forword);
+			dispatcher.forward(request, response);
 		} else {
-			response.sendRedirect("/hk-jsp-study/error.jsp");
+			forword = "error.jsp";
+			RequestDispatcher dispatcher = request.getRequestDispatcher(forword);
+			dispatcher.forward(request, response);
 		}
 	}
 }
