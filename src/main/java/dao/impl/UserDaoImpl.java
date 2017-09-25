@@ -13,12 +13,12 @@ public class UserDaoImpl implements UserDao {
 	 * 保存用户信息
 	 */
 	public void save(Connection conn, User user) throws SQLException {
-		PreparedStatement ps = conn
-				.prepareCall("INSERT INTO user (username, password, name, sex, birthday) VALUES(?,?,?,?,?)");
+		PreparedStatement ps = conn.prepareCall(
+				"INSERT INTO `user` (`id`, `username`, `password`, `name`, `sex`, `birthday`) VALUES (NULL, ?, ?, ?, ?, ?);");
 		ps.setString(1, user.getUsername());
 		ps.setString(2, user.getPassword());
-		ps.setString(4, user.getName());
-		ps.setString(3, user.getSex());
+		ps.setString(3, user.getName());
+		ps.setString(4, user.getSex());
 		ps.setDate(5, user.getBirthday());
 		ps.execute();
 	}
@@ -28,12 +28,12 @@ public class UserDaoImpl implements UserDao {
 	 */
 	public void update(Connection conn, long id, User user) throws SQLException {
 		PreparedStatement ps = conn.prepareCall(
-				"UPDATE  user SET username = ?, password = ?, name = ?, sex = ?, birthday = ? WHERE id = ?");
+				"UPDATE `user` SET username = ?, password = ?, name = ?, sex = ?, birthday = ? WHERE `user`.`id` = ?");
 		ps.setString(1, user.getUsername());
 		ps.setString(2, user.getPassword());
-		ps.setString(4, user.getName());
-		ps.setString(3, user.getSex());
-		ps.setDate(5,  user.getBirthday());
+		ps.setString(3, user.getName());
+		ps.setString(4, user.getSex());
+		ps.setDate(5, user.getBirthday());
 		ps.setLong(6, id);
 		ps.execute();
 	}
@@ -42,7 +42,7 @@ public class UserDaoImpl implements UserDao {
 	 * 删除用户信息
 	 */
 	public void delete(Connection conn, User user) throws SQLException {
-		PreparedStatement ps = conn.prepareCall("DELETE FORM user WHERE id = ?");
+		PreparedStatement ps = conn.prepareCall("DELETE FROM `user` WHERE id = ?;");
 		ps.setLong(1, user.getId());
 		ps.execute();
 	}
@@ -51,7 +51,7 @@ public class UserDaoImpl implements UserDao {
 	 * 查询用户信息
 	 */
 	public ResultSet get(Connection conn, User user) throws SQLException {
-		PreparedStatement ps = conn.prepareCall("SELECT * FORM user WHERE username = ? AND password = ?");
+		PreparedStatement ps = conn.prepareCall("SELECT * FROM `user` WHERE `username` = ? AND `password` = ?");
 		ps.setString(1, user.getUsername());
 		ps.setString(2, user.getPassword());
 		return ps.executeQuery();
