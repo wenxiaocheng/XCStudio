@@ -10,5 +10,6 @@ public class CheckUserService {
 	private UserDao userDao = new UserDaoImpl();
 public boolean check(User user) {
 	Connection conn = null;
+	return false;
 }
 }

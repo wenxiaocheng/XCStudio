@@ -1,7 +1,6 @@
 package dao.impl;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,7 +19,7 @@ public class UserDaoImpl implements UserDao {
 		ps.setString(2, user.getPassword());
 		ps.setString(4, user.getName());
 		ps.setString(3, user.getSex());
-		ps.setDate(5, (Date) user.getBirthday());
+		ps.setDate(5, user.getBirthday());
 		ps.execute();
 	}
 
@@ -34,7 +33,7 @@ public class UserDaoImpl implements UserDao {
 		ps.setString(2, user.getPassword());
 		ps.setString(4, user.getName());
 		ps.setString(3, user.getSex());
-		ps.setDate(5, (Date) user.getBirthday());
+		ps.setDate(5,  user.getBirthday());
 		ps.setLong(6, id);
 		ps.execute();
 	}

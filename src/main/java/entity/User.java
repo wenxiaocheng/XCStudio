@@ -1,22 +1,13 @@
-package model;
+package entity;
 
-import java.sql.Date;
+import java.util.Date;
 
-public class User {
-	private int id;
-	private String username;
-	private String password;
-	private String name;
-	private String sex;
-	private Date birthday;
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
+public class User extends IdEntity {
+	String username;
+	String password;
+	String name;
+	String sex;
+	Date birthday;
 
 	public String getUsername() {
 		return username;
@@ -58,16 +49,10 @@ public class User {
 		this.birthday = birthday;
 	}
 
-	public User(String username, String password, String sex, String name, Date birthday) {
-		super();
-		this.username = username;
-		this.password = password;
-		this.sex = sex;
-		this.name = name;
-		this.birthday = birthday;
+	@Override
+	public String toString() {
+		return "User [username=" + username + ", password=" + password + ", name=" + name + ", sex=" + sex
+				+ ", birthday=" + birthday + ", id=" + id + "]";
 	}
 
-	public User() {
-		super();
-	}
 }

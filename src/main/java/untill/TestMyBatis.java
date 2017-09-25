@@ -1,10 +1,13 @@
 package untill;
 
+import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+
+import model.User;
 
 public class TestMyBatis {
 	static SqlSessionFactory sqlSessionFactory = null;
@@ -13,7 +16,7 @@ public class TestMyBatis {
 	}
 
 	public static void main(String[] args) {
-//		testAdd();
+		// testAdd();
 		getUser();
 	}
 
@@ -22,7 +25,7 @@ public class TestMyBatis {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		try {
 			UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-			User user = new User("zhangsan", "123456", "man", "ahangsan", ft.parse("1995-08-09"));
+			User user = new User("zhangsan", "123456", "man", "ahangsan", (Date) ft.parse("1995-08-09"));
 			userMapper.insertUser(user);
 			sqlSession.commit();
 		} catch (ParseException e) {
@@ -43,4 +46,3 @@ public class TestMyBatis {
 		}
 	}
 }
-
