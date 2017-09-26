@@ -27,6 +27,7 @@
 			<version>3.4.5</version>
 		</dependency>
 	</dependencies>
+
 	<build>
 		<finalName>study</finalName>
 	</build>
