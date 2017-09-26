@@ -17,7 +17,7 @@ public class ConnectionFuctory {
 	static {
 		Properties properties = new Properties();
 		InputStream inputStream = ConnectionFuctory.class.getClassLoader()
-				.getResourceAsStream("dao/DBConfig.properties");
+				.getResourceAsStream("config/DBConfig.properties");
 		try {
 			properties.load(inputStream);
 		} catch (IOException e) {
