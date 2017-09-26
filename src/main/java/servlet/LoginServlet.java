@@ -38,20 +38,13 @@ public class LoginServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 
-		// 请求重定向
-		// if (username.equals("wen") && password.equals("xiaocheng")) {
-		// response.sendRedirect("/hk-jsp-study/success.jsp");
-		// } else {
-		// response.sendRedirect("/hk-jsp-study/error.jsp");
-		// }
-		// 请求转发
 		String forword = null;
 		if (username.equals("wen") && password.equals("xiaocheng")) {
-			forword = "success.jsp";
+			forword = "/pages/error.jsp";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(forword);
 			dispatcher.forward(request, response);
 		} else {
-			forword = "error.jsp";
+			forword = "/pages/error.jsp";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(forword);
 			dispatcher.forward(request, response);
 		}
