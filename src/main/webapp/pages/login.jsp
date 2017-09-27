@@ -5,17 +5,22 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>登录</title>
-    <link type="text/css" rel="stylesheet" href="/js/login.js">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
     <script type="text/javascript" src="/js/login.js"></script>
 </head>
 <body>
-<form action="<%=request.getContextPath()%>/CheckServlet" method="post"
-      name="loginForm" class="login-form">
-    用户名：<br> <input type="text" name="username" title="用户名"><br>
-    密码：<br> <input type="password" name="password" title="密码"><br>
-    <input type="submit" name="submit" value="登录"
-           onclick="return check(this)"> <input type="reset"
-                                                name="reset" value="重置">
-</form>
+<div class="login">
+    <div class="login-box">
+        <form action="<%=request.getContextPath()%>/CheckServlet"
+              method="post" name="loginForm">
+            用户名：<br> <input type="text" name="username" title="用户名"><br>
+            密码：<br> <input type="password" name="password" title="密码"><br>
+            <input type="submit" name="submit" value="登录"
+                   onclick="return check(this)"> <input type="reset"
+                                                        name="reset" value="重置">
+        </form>
+    </div>
+</div>
+
 </body>
 </html>
