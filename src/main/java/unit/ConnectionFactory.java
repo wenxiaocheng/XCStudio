@@ -24,7 +24,7 @@ public class ConnectionFactory {
             e.printStackTrace();
         }
         driver = properties.getProperty("mysql.driver");
-        dbUrl = properties.getProperty("mysql.url") + "?" + properties.getProperty("mysql.zeroDateTimeBehavior") + "&" + properties.getProperty("mySql.useUnicode") + "&" + properties.getProperty("mySql.characterEncoding") + "&" + properties.getProperty("mysql.serverTimezone") + "&" + properties.getProperty("mysql.useSSL");
+        dbUrl = properties.getProperty("mysql.url") + "?" + "useUnicode=" + properties.getProperty("mySql.useUnicode") + "&characterEncoding=" + properties.getProperty("mySql.characterEncoding") + "&serverTimezone=" + properties.getProperty("mysql.serverTimezone") + "&useSSL=" + properties.getProperty("mysql.useSSL");
         user = properties.getProperty("mysql.user");
         password = properties.getProperty("mysql.password");
     }

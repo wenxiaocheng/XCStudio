@@ -13,11 +13,15 @@
     <div class="login-box">
         <form action="<%=request.getContextPath()%>/CheckServlet"
               method="post" name="loginForm">
-            用户名：<br> <input type="text" name="username" title="用户名"><br>
-            密码：<br> <input type="password" name="password" title="密码"><br>
-            <input type="submit" name="submit" value="登录"
-                   onclick="return check(this)"> <input type="reset"
-                                                        name="reset" value="重置">
+            <h1 class="login-title">登录</h1>
+            <span class="attributes-name">用户名：</span><br> <input type="text" name="username" title="用户名" class="input"><br>
+            <p class="login-tip" id="login-tip-username"></p><br>
+            <span class="attributes-name">密码：</span><br> <input type="password" name="password" title="密码" class="input"><br>
+            <p class="login-tip" id="login-tip-password"></p><br>
+            <div class="login-button-box">
+                <input type="submit" name="submit" value="登录" class="login-button" onclick="return check(this)">
+                <input type="reset" name="reset" value="重置" class="login-button">
+            </div>
         </form>
     </div>
 </div>

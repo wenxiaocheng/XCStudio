@@ -87,7 +87,7 @@ public class UserDaoTest {
 		try {
 			ResultSet rs = userDao.get(conn, user);
 			System.out.println("查询成功！用户信息如下：");
-			System.out.println("id\t用户名\t\t密码\t名字\t性别\t生日");
+			System.out.println("id\t\t用户名\t\t密码\t\t名字\t\t性别\t\t生日");
 			while (rs.next()) {
 				System.out.println(rs.getLong("id") + "\t" + rs.getString("username") + "\t" + rs.getString("password")
 						+ "\t" + rs.getString("name") + "\t" + rs.getString("sex") + "\t" + rs.getDate("birthday"));
