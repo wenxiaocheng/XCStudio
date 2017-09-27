@@ -1,4 +1,9 @@
-driver=com.mysql.cj.jdbc.Driver
-dburl=jdbc:mysql://localhost:3306/hk-jsp-study?serverTimezone=Asia/Chongqing&useUnicode=true&characterEncoding=utf8&useSSL=true
-user=
-password=
+mysql.driver=com.mysql.cj.jdbc.Driver
+mysql.url=localhost:3306/databaseName
+mysql.user=Your database username
+mysql.password=Your database password
+mysql.zeroDateTimeBehavior=convertToNull
+mySql.useUnicode=true
+mySql.characterEncoding=UTF-8
+mysql.serverTimezone=Asia/Chongqing
+mysql.useSSL=true

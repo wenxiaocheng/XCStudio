@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import untill.ConnectionFuctory;
+import unit.ConnectionFactory;
 
 import dao.UserDao;
 import dao.impl.UserDaoImpl;
@@ -16,7 +16,7 @@ public class CheckUserService {
 	public boolean check(User user) {
 		Connection conn = null;
 		ResultSet resultSet = null;
-		conn = ConnectionFuctory.getInstence().makeConnection();
+		conn = ConnectionFactory.getInstance().makeConnection();
 		try {
 			conn.setAutoCommit(false);
 			resultSet = userDao.get(conn, user);
