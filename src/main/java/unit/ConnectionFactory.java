@@ -17,12 +17,11 @@ public class ConnectionFactory {
 
     static {
         Properties properties = new Properties();
-        InputStream inputStream = ConnectionFactory.class.getClassLoader().getResourceAsStream("/config/DBConfig.properties");
+        InputStream inputStream = ConnectionFactory.class.getResourceAsStream("/config/DBConfig.properties");
         try {
             properties.load(inputStream);
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("================ 配置文件读取错误！ ================");
         }
         driver = properties.getProperty("mysql.driver");
         dbUrl = properties.getProperty("mysql.url") + "?" + properties.getProperty("mysql.zeroDateTimeBehavior") + "&" + properties.getProperty("mySql.useUnicode") + "&" + properties.getProperty("mySql.characterEncoding") + "&" + properties.getProperty("mysql.serverTimezone") + "&" + properties.getProperty("mysql.useSSL");
@@ -31,7 +30,6 @@ public class ConnectionFactory {
     }
 
     private ConnectionFactory() {
-
     }
 
     public static ConnectionFactory getInstance() {
