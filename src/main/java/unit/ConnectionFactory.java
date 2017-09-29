@@ -13,18 +13,20 @@ public class ConnectionFactory {
     private static String user;
     private static String password;
     private static final ConnectionFactory CONNECTION_FACTORY = new ConnectionFactory();
-    private Connection conn;
+    private Connection conn = null;
 
     static {
         Properties properties = new Properties();
-        InputStream inputStream = ConnectionFactory.class.getResourceAsStream("/config/DBConfig.properties");
+        InputStream inputStream = ConnectionFactory.class.getResourceAsStream("config/DBConfig.properties");
         try {
+            System.out.println(inputStream);
             properties.load(inputStream);
+            inputStream.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
         driver = properties.getProperty("mysql.driver");
-        dbUrl = properties.getProperty("mysql.url") + "?" + "useUnicode=" + properties.getProperty("mySql.useUnicode") + "&characterEncoding=" + properties.getProperty("mySql.characterEncoding") + "&serverTimezone=" + properties.getProperty("mysql.serverTimezone") + "&useSSL=" + properties.getProperty("mysql.useSSL");
+        dbUrl = properties.getProperty("mysql.url") + "?" + "useUnicode=" + properties.getProperty("mysql.useUnicode") + "&characterEncoding=" + properties.getProperty("mysql.characterEncoding") + "&serverTimezone=" + properties.getProperty("mysql.serverTimezone") + "&useSSL=" + properties.getProperty("mysql.useSSL");
         user = properties.getProperty("mysql.user");
         password = properties.getProperty("mysql.password");
     }
