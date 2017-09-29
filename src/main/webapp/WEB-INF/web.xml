@@ -7,13 +7,11 @@
 	<servlet>
 		<servlet-name>LoginServlet</servlet-name>
 		<display-name>LoginServlet</display-name>
-		<description></description>
 		<servlet-class>servlet.LoginServlet</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>CheckServlet</servlet-name>
 		<display-name>CheckServlet</display-name>
-		<description></description>
 		<servlet-class>servlet.CheckServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>

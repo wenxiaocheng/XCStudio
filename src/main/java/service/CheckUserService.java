@@ -1,14 +1,13 @@
 package service;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-import unit.ConnectionFactory;
-
 import dao.UserDao;
 import dao.impl.UserDaoImpl;
 import model.User;
+import unit.ConnectionFactory;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class CheckUserService {
 	private UserDao userDao = new UserDaoImpl();

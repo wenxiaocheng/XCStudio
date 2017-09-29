@@ -1,4 +1,4 @@
-DBConfig.properties
+/config//DBConfig.properties
 
 <<<<<<< HEAD
 /target/
@@ -137,3 +137,11 @@ local.properties
 .cache-main
 .scala_dependencies
 .worksheet
+src/main/webapp/WEB-INF/classes/
+src/main/webapp/WEB-INF/conf/
+src/main/webapp/WEB-INF/lib/
+src/main/webapp/css/module/
+src/main/webapp/include/
+src/main/webapp/js/module/
+src/main/webapp/resources/
+src/main/webapp/templates/

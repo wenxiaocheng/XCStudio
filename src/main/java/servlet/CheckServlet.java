@@ -62,5 +62,4 @@ public class CheckServlet extends HttpServlet {
 			rd.forward(request, response);
 		}
 	}
-
 }
