@@ -11,23 +11,27 @@ import model.User;
 import unit.ConnectionFactory;
 
 public class UserDaoTest {
-	static Connection conn = ConnectionFactory.getInstance().makeConnection();
-	static UserDao userDao = new UserDaoImpl();
-	static User user = new User();
+	Connection conn = ConnectionFactory.getInstance().makeConnection();
+	UserDao userDao = new UserDaoImpl();
+	User user = new User();
 
 	public static void main(String[] args) {
+		UserDaoTest udt = new UserDaoTest();
+		// save();
+		// delete();
+		// update();
+		udt.get();
+	}
+
+	public UserDaoTest() {
 		try {
 			conn.setAutoCommit(false);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		// save();
-		// delete();
-		// update();
-		get();
 	}
 
-	private static void save() {
+	private void save() {
 		try {
 			user.setUsername("tom");
 			user.setPassword("123456");
@@ -47,7 +51,7 @@ public class UserDaoTest {
 		}
 	}
 
-	private static void delete() {
+	private void delete() {
 		long id = 5;
 		user.setId(id);
 		try {
@@ -58,7 +62,7 @@ public class UserDaoTest {
 		}
 	}
 
-	private static void update() {
+	private void update() {
 		long id = 6;
 		try {
 			user.setUsername("mahuateng");
@@ -79,7 +83,7 @@ public class UserDaoTest {
 		}
 	}
 
-	private static void get() {
+	private void get() {
 		String username = "wenxiaocheng";
 		String password = "123456";
 		user.setUsername(username);
