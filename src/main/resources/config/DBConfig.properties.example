@@ -1,8 +1,11 @@
 mysql.driver=com.mysql.cj.jdbc.Driver
-mysql.url=jdbc:mysql://localhost:3306/databaseName
-mysql.user=Your database username
-mysql.password=Your database password
-mySql.useUnicode=true
-mySql.characterEncoding=UTF-8
+# 请修改主机名和数据库名
+mysql.url=jdbc:mysql://Your_host_name:3306/databaseName
+# 请修改用户名
+mysql.user=userName
+# 请修改密码
+mysql.password=password
+mysql.useUnicode=true
+mysql.characterEncoding=UTF-8
 mysql.serverTimezone=Asia/Chongqing
 mysql.useSSL=true

@@ -1,4 +1,4 @@
-DBConfig.properties
+src/main/resources/config/DBConfig.properties
 .idea/
 
 <<<<<<< HEAD
