@@ -31,7 +31,7 @@
 
             <%-- 登录框 --%>
             <form class="form form-horizontal" id="login-form"
-                  action="<%=request.getContextPath()%>/CheckServlet"
+                  action="<%= request.getContextPath() %>/CheckServlet"
                   method="post" role="form">
 
                 <div class="form-group form-group-lg">

@@ -27,13 +27,6 @@ src/main/resources/config/DBConfig.properties
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 >>>>>>> branch 'master' of https://github.com/wenxiaocheng/hk-jsp-study.git
-<<<<<<< HEAD
-.idea/hk-jsp-study.iml
-.idea/inspectionProfiles/
-.idea/modules.xml
-.idea/workspace.xml
-src/test/
-=======
 
 # eclipse ===============================================================================================
 .metadata
@@ -85,11 +78,4 @@ local.properties
 .cache-main
 .scala_dependencies
 .worksheet
-src/main/webapp/WEB-INF/classes/
-src/main/webapp/WEB-INF/conf/
-src/main/webapp/WEB-INF/lib/
-src/main/webapp/css/module/
-src/main/webapp/include/
-src/main/webapp/js/module/
-src/main/webapp/resources/
-src/main/webapp/templates/
+
