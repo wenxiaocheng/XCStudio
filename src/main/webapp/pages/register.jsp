@@ -5,17 +5,11 @@
 <head>
     <jsp:include page="/pages/module/base.jsp" flush="true"/>
     <title>注册 - XCStudio</title>
-    <link rel="stylesheet" type="text/css" href="/css/module/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/extends/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/css/extends/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="/css/extends/bootstrapValidator.css">
-    <link rel="stylesheet" type="text/css" href="/css/register.css">
-    <script type="text/javascript" src="/js/extends/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="/js/extends/jquery-ui.js"></script>
-    <script type="text/javascript" src="/js/extends/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/login_register.css">
     <script type="text/javascript" src="/js/extends/bootstrapValidator.js"></script>
     <script type="text/javascript" src="/js/extends/bootstrapvalidator-zh_CN.js"></script>
-    <script type="text/javascript" src="/js/form.js"></script>
+    <script type="text/javascript" src="/js/module/register.js"></script>
 </head>
 <body>
 
@@ -27,10 +21,10 @@
     <%-- ===============================内容=============================== --%>
     <div class="content row">
 
-        <%-- =========================== 登录/注册盒子 =========================== --%>
+        <%-- 登录/注册盒子 --%>
         <div class="login-register-box col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6">
             <div class="login-register-title col-md-12">
-                <h3 class="text-center">用户注册 </h3>
+                <h3 class="text-center">注册 </h3>
             </div>
 
             <%-- =========================== 注册框 =========================== --%>
@@ -43,7 +37,7 @@
                     <div class="col-md-offset-1 col-md-10">
                         <input type="text" class="form-control" id="register-input-username"
                                placeholder="请输入用户名"
-                               name="register_username">
+                               name="username">
                     </div>
                 </div>
 
@@ -52,7 +46,7 @@
                     <div class="col-md-offset-1 col-md-10">
                         <input type="password" class="form-control" id="register-input-password"
                                placeholder="请输入密码"
-                               name="register_password">
+                               name="password">
                     </div>
                 </div>
 
@@ -61,7 +55,7 @@
                     <div class="col-md-offset-1 col-md-10">
                         <input type="password" class="form-control" id="register-input-confirm-password"
                                placeholder="请输入确认密码"
-                               name="register_confirm_password">
+                               name="confirm_password">
                     </div>
                 </div>
 
@@ -70,7 +64,7 @@
                     <div class="col-md-offset-1 col-md-10">
                         <input type="email" class="form-control" id="register-input-email"
                                placeholder="请输入电子邮箱地址"
-                               name="register_email">
+                               name="email">
                     </div>
                 </div>
 
@@ -78,7 +72,7 @@
                     <div class="col-md-offset-1 col-md-8">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="register_terms" id="termsAgree">
+                                <input type="checkbox" name="terms" id="termsAgree">
                                 <span>我已阅读并同意<a href="#">《用户协议与条款》</a></span>
                             </label>
                         </div>
@@ -99,9 +93,7 @@
                     </div>
                 </div>
             </form>
-
         </div>
-
     </div>
 
     <%-- ===============================脚部=============================== --%>

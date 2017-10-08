@@ -1,15 +1,14 @@
 package servlet;
 
-import java.io.IOException;
+import model.User;
+import service.CheckUserService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import model.User;
-import service.CheckUserService;
+import java.io.IOException;
 
 /**
  * Servlet implementation class CheckServlet
@@ -53,7 +52,7 @@ public class CheckServlet extends HttpServlet {
 			user.setPassword(password);
 			boolean bool = new CheckUserService().check(user);
 			if (bool) {
-				forword = "/pages/success.jsp";
+				forword = "/";
 			} else {
 				request.setAttribute("msg", "用户名或密码有误，请重新输入！");
 				forword = "/pages/error.jsp";

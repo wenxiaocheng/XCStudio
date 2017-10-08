@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <jsp:include page="base.jsp" flush="true"/>
+    <%--<jsp:include page="/pages/module/base.jsp" flush="true"/>--%>
     <link rel="stylesheet" type="text/css" href="/css/module/footer.css">
     <script type="text/javascript" src="/js/module/footer.js"></script>
 </head>

@@ -8,17 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="zh-CN">
 <head>
-    <jsp:include page="/pages/module/base.jsp" flush="true"/>
-    <link rel="stylesheet" type="text/css" href="/css/module/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/extends/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/css/extends/jquery-ui.css">
+    <%--<jsp:include page="/pages/module/base.jsp" flush="true"/>--%>
     <link rel="stylesheet" type="text/css" href="/css/module/header.css">
-    <script type="text/javascript" src="/js/extends/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="/js/extends/jquery-ui.js"></script>
-    <script type="text/javascript" src="/js/extends/bootstrap.js"></script>
     <script type="text/javascript" src="/js/module/header.js"></script>
 </head>
 <body>
+
 <%-- ===============================头部=============================== --%>
 <div class="header">
     <nav class="navbar navbar-inverse row">
@@ -44,9 +39,10 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">首页 <span class="sr-only">(current)</span></a></li>
                     <li><a href="#">博客</a></li>
+                    <li><a href="#">发现</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-haspopup="true" aria-expanded="false">学习 <span class="caret"></span></a>
+                           aria-haspopup="true" aria-expanded="false">魔鬼学院 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">java</a></li>
                             <li><a href="#">html</a></li>
@@ -68,9 +64,9 @@
                     <a class="btn btn-primary" href="/pages/register.jsp">注册</a>
                 </form>
             </div>
-
         </div>
     </nav>
 </div>
+
 </body>
 </html>

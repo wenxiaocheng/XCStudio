@@ -1,4 +1,3 @@
-
 /* ===============================内容=============================== */
 
 /*幻灯片图片*/
@@ -19,7 +18,6 @@
     }
 }
 
-
 .index-content-panel {
     margin-bottom: 0;
     background-color: white;
@@ -34,16 +32,22 @@
     background-color: #2783a6;
 }
 
+.activity {
+    padding: 0;
+}
+
 .activity a {
     width: 100%;
-    height: 100px;
-    padding: 3px;
+    height: 80px;
+    margin: 0;
+    padding-top: 5px;
     text-align: center;
     color: white;
 }
 
 .activity a:hover {
-    background-color: #00c1de;
+    color: #1b2e4b;
+    /*background-color: #00c1de;*/
 }
 
 .box {

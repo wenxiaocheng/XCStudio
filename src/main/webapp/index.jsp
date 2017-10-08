@@ -4,14 +4,8 @@
 <html lang="zh-CN">
 <head>
     <jsp:include page="/pages/module/base.jsp" flush="true"/>
-    <title>首页</title>
-    <link rel="stylesheet" type="text/css" href="/css/module/base.css">
-    <link rel="stylesheet" type="text/css" href="/css/extends/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/css/extends/jquery-ui.css">
+    <title>首页 - XCStudio</title>
     <link rel="stylesheet" type="text/css" href="/css/index.css">
-    <script type="text/javascript" src="/js/extends/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="/js/extends/jquery-ui.js"></script>
-    <script type="text/javascript" src="/js/extends/bootstrap.js"></script>
     <script type="text/javascript" src="/js/index.js"></script>
 </head>
 <body>
@@ -67,37 +61,45 @@
 
         <%--主页内容--%>
         <div class="index-content-panel row" id="index-content-panel-1">
-            <div class="activity col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-6">
-                <a href="#" class="btn">
-                    <h2>快速入口</h2>
-                    <p>快速入口简介</p>
-                </a>
-            </div>
-            <div class="activity col-md-2 col-sm-2 col-xs-6">
-                <a href="#" class="btn">
-                    <h2>快速入口</h2>
-                    <p>快速入口简介</p>
-                </a>
-            </div>
-            <div class="activity col-md-2 col-sm-2 col-xs-6">
-                <a href="#" class="btn">
-                    <h2>快速入口</h2>
-                    <p>快速入口简介</p>
-                </a>
-            </div>
-            <div class="activity col-md-2 col-sm-2 col-xs-6">
-                <a href="#" class="btn">
-                    <h2>快速入口</h2>
-                    <p>快速入口简介</p>
-                </a>
-            </div>
-            <div class="activity col-md-2 col-sm-2 col-xs-6">
-                <a href="#" class="btn">
-                    <h2>快速入口</h2>
-                    <p>快速入口简介</p>
-                </a>
-            </div>
+            <div class="col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+                <div class="activity col-md-2 col-sm-2 col-xs-4">
+                    <a href="#" class="btn">
+                        <h4>快速入口</h4>
+                        <p>快速入口简介</p>
+                    </a>
+                </div>
+                <div class="activity col-md-2 col-sm-2 col-xs-4">
+                    <a href="#" class="btn">
+                        <h4>快速入口</h4>
+                        <p>快速入口简介</p>
+                    </a>
+                </div>
+                <div class="activity col-md-2 col-sm-2 col-xs-4">
+                    <a href="#" class="btn">
+                        <h4>快速入口</h4>
+                        <p>快速入口简介</p>
+                    </a>
+                </div>
+                <div class="activity col-md-2 col-sm-2 col-xs-4">
+                    <a href="#" class="btn">
+                        <h4>快速入口</h4>
+                        <p>快速入口简介</p>
+                    </a>
+                </div>
+                <div class="activity col-md-2 col-sm-2 col-xs-4">
+                    <a href="#" class="btn">
+                        <h4>快速入口</h4>
+                        <p>快速入口简介</p>
+                    </a>
+                </div>
+                <div class="activity col-md-2 col-sm-2 col-xs-4">
+                    <a href="#" class="btn">
+                        <h4>快速入口</h4>
+                        <p>快速入口简介</p>
+                    </a>
+                </div>
 
+            </div>
         </div>
 
         <div class="index-content-panel row" id="index-content-panel-2">
