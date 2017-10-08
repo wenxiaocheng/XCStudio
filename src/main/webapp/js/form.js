@@ -27,7 +27,6 @@ $(document).ready(function () {
                 },
 
                 login_password: {
-                    enabled: false,
                     validators: {
                         notEmpty: {
                             message: '密码不能为空'
@@ -119,6 +118,23 @@ $(document).ready(function () {
                         identical: {
                             field: 'register_password',
                             message: '两次输入的密码不一致'
+                        }
+                    }
+                },
+
+                register_email: {
+                    message: '电子邮箱地址无效',
+                    validators: {
+                        notEmpty: {
+                            message: '电子邮箱不能为空'
+                        }
+                    }
+                },
+
+                register_terms: {
+                    validators: {
+                        notEmpty: {
+                            message: '要完成注册，你需要同意本网站的协议与条款'
                         }
                     }
                 }
